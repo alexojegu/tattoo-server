@@ -6,6 +6,7 @@
       "request": "launch",
       "name": "Launch Server",
       "program": "${workspaceFolder}/src/index.ts",
+      "envFile": "${workspaceFolder}/.env.development",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ],
