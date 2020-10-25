@@ -16,7 +16,11 @@
     "watch": "node makefile watch"
   },
   "dependencies": {
+    "@graphql-tools/load-files": "^6.2.4",
+    "apollo-datasource": "^0.7.2",
+    "apollo-server-express": "^2.18.2",
     "express": "^4.17.1",
+    "graphql": "^14.7.0",
     "reflect-metadata": "^0.1.13",
     "tslib": "^2.0.3",
     "tsyringe": "^4.3.0"

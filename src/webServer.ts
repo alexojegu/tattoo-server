@@ -1,18 +1,25 @@
 import express, { Application } from "express";
 import { Server, createServer } from "http";
 import { singleton } from "tsyringe";
+import GraphqlMiddleware from "./middlewares/graphqlMiddleware";
 
 @singleton()
 export default class WebServer {
+    private initialized: boolean;
     private application: Application;
     private server: Server;
 
     public constructor() {
+        this.initialized = false;
         this.application = express();
         this.server = createServer(this.application);
     }
 
     public async listen(): Promise<void> {
+        if (!this.initialized) {
+            this.initialize();
+        }
+
         if (this.server.listening) {
             return;
         }
@@ -25,7 +32,7 @@ export default class WebServer {
     }
 
     public async close(): Promise<void> {
-        if (!this.server.listening) {
+        if (!this.initialized || !this.server.listening) {
             return;
         }
 
@@ -35,4 +42,16 @@ export default class WebServer {
             this.server.close();
         });
     }
+
+    private initialize(): void {
+        const graphqlMiddleware = new GraphqlMiddleware();
+
+        graphqlMiddleware.apply(this.application);
+
+        this.initialized = true;
+    }
+}
+
+export interface WebServerMiddleware {
+    apply: (application: Application) => void;
 }

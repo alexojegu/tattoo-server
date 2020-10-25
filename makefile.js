@@ -27,6 +27,7 @@ target.build = () => {
   environment('production');
   rm('-rf', 'dist/*');
   exec('tsc -p tsconfig.json');
+  cp('-r', 'src/schemas', 'dist');
 };
 
 target.watch = () => {
