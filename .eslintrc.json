@@ -1,0 +1,47 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": ["dist"],
+  "rules": {
+    "no-console": "warn",
+    "no-duplicate-imports": "error",
+    "sort-imports": ["error", { "ignoreDeclarationSort": true }],
+    "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
+    "@typescript-eslint/explicit-member-accessibility": "error",
+    "@typescript-eslint/member-ordering": "error",
+    "@typescript-eslint/no-use-before-define": ["error", { "functions": false }],
+    "@typescript-eslint/promise-function-async": "error",
+    "@typescript-eslint/require-await": "error"
+  },
+  "overrides": [
+    {
+      "files": "*.js",
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    },
+    {
+      "files": "makefile.js",
+      "env": {
+        "shelljs": true
+      }
+    }
+  ]
+}

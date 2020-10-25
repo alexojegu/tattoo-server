@@ -1,0 +1,5 @@
+{
+  "hooks": {
+    "pre-commit": "node makefile git -- pre-commit"
+  }
+}
