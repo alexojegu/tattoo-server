@@ -4,4 +4,7 @@ extend type Query {
 
 type Account {
     id: ID!
+    email: String!
+    name: String!
+    image: String!
 }

@@ -2,6 +2,7 @@ import express, { Application } from "express";
 import { Server, createServer } from "http";
 import { singleton } from "tsyringe";
 import GraphqlMiddleware from "./middlewares/graphqlMiddleware";
+import OrmMiddleware from "./middlewares/ormMiddleware";
 
 @singleton()
 export default class WebServer {
@@ -44,8 +45,10 @@ export default class WebServer {
     }
 
     private initialize(): void {
+        const ormMiddleware = new OrmMiddleware();
         const graphqlMiddleware = new GraphqlMiddleware();
 
+        ormMiddleware.apply(this.application);
         graphqlMiddleware.apply(this.application);
 
         this.initialized = true;

@@ -2,7 +2,7 @@ import { IResolverObject, IResolvers } from "apollo-server-express";
 import { GraphqlMiddlewareContext } from "../middlewares/graphqlMiddleware";
 
 const queryType: IResolverObject<undefined, GraphqlMiddlewareContext> = {
-    account: (_parent, { id }, { dataSources }) => {
+    account: async (_parent, { id }, { dataSources }) => {
         return dataSources.accountSource.getNode(id);
     },
 };
