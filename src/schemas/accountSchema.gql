@@ -7,4 +7,6 @@ type Account {
     email: String!
     name: String!
     image: String!
+    created: Date!
+    updated: Date
 }
