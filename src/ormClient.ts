@@ -25,6 +25,7 @@ export default class OrmClient {
             entitiesTs: ["src/entities/*.ts"],
             autoJoinOneToOneOwner: false,
             forceUtcTimezone: true,
+            multipleStatements: true,
             context: () => this.asyncLocalStorage.getStore(),
         };
     }

@@ -9,6 +9,7 @@ module.exports = {
   dbName: process.env.DATABASE_NAME,
   entities: ['dist/entities/*.js'],
   entitiesTs: ['src/entities/*.ts'],
+  autoJoinOneToOneOwner: false,
   forceUtcTimezone: true,
   multipleStatements: true,
 };

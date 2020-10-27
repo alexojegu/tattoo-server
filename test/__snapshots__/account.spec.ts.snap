@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphQL API cuenta Consultas de cuenta Obtiene una cuenta por id 1`] = `
+Object {
+  "data": Object {
+    "account": Object {
+      "created": "2020-01-01T12:30:30.000Z",
+      "email": "abridal0@tamu.edu",
+      "id": "1",
+      "image": "photo-1542080681-b52d382432af",
+      "name": "Aylmer Bridal",
+      "updated": "2020-03-01T12:30:30.000Z",
+    },
+  },
+}
+`;
