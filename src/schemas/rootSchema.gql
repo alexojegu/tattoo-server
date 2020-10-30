@@ -1,3 +1,8 @@
 scalar Date
 
 type Query
+
+type Page {
+    next: Boolean!
+    cursor: String
+}

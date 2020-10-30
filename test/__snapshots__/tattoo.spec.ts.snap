@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphQL API tatuaje Consultas de tatuaje Obtiene los primeros 5 tatuajes 1`] = `
+Object {
+  "data": Object {
+    "tattoos": Object {
+      "nodes": Array [
+        Object {
+          "created": "2020-06-23T12:30:30.000Z",
+          "height": 1536,
+          "id": "45",
+          "image": "photo-1499492568083-9115ab12d0d2",
+          "updated": "2020-07-12T12:30:30.000Z",
+          "width": 2048,
+        },
+        Object {
+          "created": "2020-06-22T12:30:30.000Z",
+          "height": 3168,
+          "id": "44",
+          "image": "photo-1503875489810-33dee4b91809",
+          "updated": null,
+          "width": 4752,
+        },
+        Object {
+          "created": "2020-06-22T12:30:30.000Z",
+          "height": 7952,
+          "id": "43",
+          "image": "photo-1521124832270-70053fc58e01",
+          "updated": null,
+          "width": 5304,
+        },
+        Object {
+          "created": "2020-06-21T12:30:30.000Z",
+          "height": 5616,
+          "id": "42",
+          "image": "photo-1551116173-fa2fd1ce3a8b",
+          "updated": "2020-07-11T12:30:30.000Z",
+          "width": 3388,
+        },
+        Object {
+          "created": "2020-06-21T12:30:30.000Z",
+          "height": 4000,
+          "id": "41",
+          "image": "photo-1570106786245-ce68ce6503f8",
+          "updated": "2020-07-11T12:30:30.000Z",
+          "width": 5539,
+        },
+      ],
+      "page": Object {
+        "cursor": "eyJpZCI6NDF9",
+        "next": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`GraphQL API tatuaje Consultas de tatuaje Obtiene los ultimos 5 tatuajes 1`] = `
+Object {
+  "data": Object {
+    "tattoos": Object {
+      "nodes": Array [
+        Object {
+          "created": "2020-06-03T12:30:30.000Z",
+          "height": 2666,
+          "id": "5",
+          "image": "photo-1510362753328-028a0e6b0e9b",
+          "updated": "2020-07-02T12:30:30.000Z",
+          "width": 4000,
+        },
+        Object {
+          "created": "2020-06-02T12:30:30.000Z",
+          "height": 3072,
+          "id": "4",
+          "image": "photo-1565058379802-bbe93b2f703a",
+          "updated": null,
+          "width": 4608,
+        },
+        Object {
+          "created": "2020-06-02T12:30:30.000Z",
+          "height": 6000,
+          "id": "3",
+          "image": "photo-1513078094721-e7b6e0394a6a",
+          "updated": null,
+          "width": 4000,
+        },
+        Object {
+          "created": "2020-06-01T12:30:30.000Z",
+          "height": 3745,
+          "id": "2",
+          "image": "photo-1475695752828-6d2b0a83cf8a",
+          "updated": "2020-07-01T12:30:30.000Z",
+          "width": 5400,
+        },
+        Object {
+          "created": "2020-06-01T12:30:30.000Z",
+          "height": 5200,
+          "id": "1",
+          "image": "photo-1526893299283-37e82b1e4da5",
+          "updated": "2020-07-01T12:30:30.000Z",
+          "width": 3470,
+        },
+      ],
+      "page": Object {
+        "cursor": "eyJpZCI6MX0=",
+        "next": false,
+      },
+    },
+  },
+}
+`;

@@ -3,6 +3,7 @@ import { ApolloServer, IResolvers } from "apollo-server-express";
 import { Application } from "express";
 import { autoInjectable, container } from "tsyringe";
 import AccountSource from "../sources/accountSource";
+import TattooSource from "../sources/tattooSource";
 import { WebServerMiddleware } from "../webServer";
 
 @autoInjectable()
@@ -18,6 +19,7 @@ export default class GraphqlMiddleware implements WebServerMiddleware {
 
                 return {
                     accountSource: child.resolve(AccountSource),
+                    tattooSource: child.resolve(TattooSource),
                 };
             },
         });
@@ -34,5 +36,6 @@ export default class GraphqlMiddleware implements WebServerMiddleware {
 export interface GraphqlMiddlewareContext {
     dataSources: {
         accountSource: AccountSource;
+        tattooSource: TattooSource;
     };
 }

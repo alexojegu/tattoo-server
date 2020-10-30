@@ -1,0 +1,17 @@
+extend type Query {
+    tattoos(limit: Int!, cursor: String): TattooEdge!
+}
+
+type Tattoo {
+    id: ID!
+    image: String!
+    width: Int!
+    height: Int!
+    created: Date!
+    updated: Date
+}
+
+type TattooEdge {
+    nodes: [Tattoo]!
+    page: Page!
+}
