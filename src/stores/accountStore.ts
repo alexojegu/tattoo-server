@@ -14,4 +14,8 @@ export default class AccountStore {
     public async findId(id: string | number): Promise<AccountEntity | null> {
         return this.accountRepository.findOne({ id: { $eq: id as number } });
     }
+
+    public async findIds(ids: (string | number)[]): Promise<AccountEntity[]> {
+        return this.accountRepository.find({ id: { $in: ids as number[] } });
+    }
 }

@@ -1,0 +1,19 @@
+extend type Query {
+    artists(limit: Int!, cursor: String): ArtistEdge!
+}
+
+type Artist {
+    id: ID!
+    account: Account!
+    tattoos(limit: Int!, cursor: String): TattooEdge!
+    website: String
+    instagram: String
+    facebook: String
+    created: Date!
+    updated: Date
+}
+
+type ArtistEdge {
+    nodes: [Artist]!
+    page: Page!
+}

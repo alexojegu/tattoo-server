@@ -1,9 +1,13 @@
-import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
+import { Entity, ManyToOne, PrimaryKey, Property, Reference } from "@mikro-orm/core";
+import ArtistEntity from "./artistEntity";
 
 @Entity({ tableName: "tattoo" })
 export default class TattooEntity {
     @PrimaryKey()
     public id!: number;
+
+    @ManyToOne(() => ArtistEntity, { wrappedReference: true })
+    public artist!: Reference<ArtistEntity>;
 
     @Property()
     public image!: string;

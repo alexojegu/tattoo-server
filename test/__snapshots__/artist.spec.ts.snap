@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphQL API artista Consultas de artista Obtiene los primeros 5 artistas 1`] = `
+Object {
+  "data": Object {
+    "artists": Object {
+      "nodes": Array [
+        Object {
+          "account": Object {
+            "id": "59",
+          },
+          "created": "2020-03-01T12:30:30.000Z",
+          "facebook": "https://moonfruit.com",
+          "id": "30",
+          "instagram": null,
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": null,
+          "website": null,
+        },
+        Object {
+          "account": Object {
+            "id": "57",
+          },
+          "created": "2020-02-29T12:30:30.000Z",
+          "facebook": "http://uiuc.edu",
+          "id": "29",
+          "instagram": "http://nasa.gov",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "45",
+              },
+              Object {
+                "id": "44",
+              },
+              Object {
+                "id": "43",
+              },
+            ],
+          },
+          "updated": "2020-03-15T12:30:30.000Z",
+          "website": "http://latimes.com",
+        },
+        Object {
+          "account": Object {
+            "id": "55",
+          },
+          "created": "2020-02-28T12:30:30.000Z",
+          "facebook": "https://uol.com.br",
+          "id": "28",
+          "instagram": null,
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": null,
+          "website": "https://slate.com",
+        },
+        Object {
+          "account": Object {
+            "id": "53",
+          },
+          "created": "2020-02-27T12:30:30.000Z",
+          "facebook": "https://google.it",
+          "id": "27",
+          "instagram": "http://yahoo.co.jp",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "40",
+              },
+              Object {
+                "id": "39",
+              },
+              Object {
+                "id": "38",
+              },
+            ],
+          },
+          "updated": "2020-03-14T12:30:30.000Z",
+          "website": null,
+        },
+        Object {
+          "account": Object {
+            "id": "51",
+          },
+          "created": "2020-02-26T12:30:30.000Z",
+          "facebook": "http://harvard.edu",
+          "id": "26",
+          "instagram": null,
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": null,
+          "website": "http://omniture.com",
+        },
+      ],
+      "page": Object {
+        "cursor": "eyJpZCI6MjZ9",
+        "next": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`GraphQL API artista Consultas de artista Obtiene los ultimos 5 artistas 1`] = `
+Object {
+  "data": Object {
+    "artists": Object {
+      "nodes": Array [
+        Object {
+          "account": Object {
+            "id": "9",
+          },
+          "created": "2020-02-05T12:30:30.000Z",
+          "facebook": "http://msu.edu",
+          "id": "5",
+          "instagram": "http://wufoo.com",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "6",
+              },
+              Object {
+                "id": "5",
+              },
+              Object {
+                "id": "4",
+              },
+            ],
+          },
+          "updated": "2020-03-03T12:30:30.000Z",
+          "website": "https://forbes.com",
+        },
+        Object {
+          "account": Object {
+            "id": "7",
+          },
+          "created": "2020-02-04T12:30:30.000Z",
+          "facebook": "http://rambler.ru",
+          "id": "4",
+          "instagram": null,
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": null,
+          "website": "https://blogger.com",
+        },
+        Object {
+          "account": Object {
+            "id": "5",
+          },
+          "created": "2020-02-03T12:30:30.000Z",
+          "facebook": "http://state.tx.us",
+          "id": "3",
+          "instagram": "https://imgur.com",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "3",
+              },
+              Object {
+                "id": "2",
+              },
+            ],
+          },
+          "updated": "2020-03-02T12:30:30.000Z",
+          "website": null,
+        },
+        Object {
+          "account": Object {
+            "id": "3",
+          },
+          "created": "2020-02-02T12:30:30.000Z",
+          "facebook": "http://friendfeed.com",
+          "id": "2",
+          "instagram": null,
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": null,
+          "website": "https://ameblo.jp",
+        },
+        Object {
+          "account": Object {
+            "id": "1",
+          },
+          "created": "2020-02-01T12:30:30.000Z",
+          "facebook": "https://aol.com",
+          "id": "1",
+          "instagram": "http://tumblr.com",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "1",
+              },
+            ],
+          },
+          "updated": "2020-03-01T12:30:30.000Z",
+          "website": "http://china.com.cn",
+        },
+      ],
+      "page": Object {
+        "cursor": "eyJpZCI6MX0=",
+        "next": false,
+      },
+    },
+  },
+}
+`;
