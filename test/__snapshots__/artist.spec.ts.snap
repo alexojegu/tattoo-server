@@ -1,5 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GraphQL API artista Consultas de artista Obtiene un artista por id 1`] = `
+Object {
+  "data": Object {
+    "artist": Object {
+      "account": Object {
+        "id": "1",
+      },
+      "created": "2020-02-01T12:30:30.000Z",
+      "facebook": "https://aol.com",
+      "id": "1",
+      "instagram": "http://tumblr.com",
+      "tattoos": Object {
+        "nodes": Array [
+          Object {
+            "id": "1",
+          },
+        ],
+      },
+      "updated": "2020-03-01T12:30:30.000Z",
+      "website": "http://china.com.cn",
+    },
+  },
+}
+`;
+
 exports[`GraphQL API artista Consultas de artista Obtiene los primeros 5 artistas 1`] = `
 Object {
   "data": Object {

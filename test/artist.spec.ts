@@ -1,4 +1,4 @@
-import { ARTISTS } from "./__requests__/artist";
+import { ARTIST, ARTISTS } from "./__requests__/artist";
 import { seed, wipe } from "./__utils__/database";
 import { post } from "./__utils__/request";
 
@@ -10,6 +10,13 @@ describe("GraphQL API artista", () => {
 
         afterAll(async () => {
             await wipe();
+        });
+
+        test("Obtiene un artista por id", async () => {
+            const variables = { id: 1, tattooLimit: 3 };
+            const response = await post(ARTIST, variables);
+
+            expect(await response.json()).toMatchSnapshot();
         });
 
         test("Obtiene los primeros 5 artistas", async () => {

@@ -4,6 +4,9 @@ import { GraphqlMiddlewareContext } from "../middlewares/graphqlMiddleware";
 import EdgeUtil from "../utils/edgeUtil";
 
 const queryType: IResolverObject<undefined, GraphqlMiddlewareContext> = {
+    artist: async (_parent, { id }, { dataSources }) => {
+        return dataSources.artistSource.getNode(id);
+    },
     artists: async (_parent, { limit, cursor }, { dataSources }) => {
         return dataSources.artistSource.getEdge(limit, EdgeUtil.decode(cursor));
     },

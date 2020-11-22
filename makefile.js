@@ -21,6 +21,7 @@ target.start = () => {
 target.lint = () => {
   environment('development');
   exec('eslint . --ext .js,.ts');
+  exec('prettier src/**/*.gql --write');
 };
 
 target.test = () => {

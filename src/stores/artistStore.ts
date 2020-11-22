@@ -11,6 +11,10 @@ export default class ArtistStore {
         this.artistRepository = ormClient.em.getRepository(ArtistEntity);
     }
 
+    public async findId(id: string | number): Promise<ArtistEntity | null> {
+        return this.artistRepository.findOne({ id: { $eq: id as number } });
+    }
+
     public async findList(limit: number, cursor?: ArtistStoreCursor): Promise<ArtistEntity[]> {
         const query = this.artistRepository.createQueryBuilder("e0").select(["e0.*"]);
 
