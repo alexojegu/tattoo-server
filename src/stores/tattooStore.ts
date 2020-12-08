@@ -13,6 +13,10 @@ export default class TattooStore {
         this.tattooRepository = ormClient.em.getRepository(TattooEntity);
     }
 
+    public async findId(id: string | number): Promise<TattooEntity | null> {
+        return this.tattooRepository.findOne({ id: { $eq: id as number } });
+    }
+
     // eslint-disable-next-line prettier/prettier
     public async findArtists(artists: (string | number)[], limit: number, cursor?: TattooStoreCursor): Promise<TattooEntity[]> {
         let results;

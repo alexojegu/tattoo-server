@@ -17,6 +17,10 @@ export default class TattooSource extends DataSource {
         this.tattooLoader = tattooLoader;
     }
 
+    public async getNode(id: string): Promise<TattooEntity | null> {
+        return this.tattooStore.findId(id);
+    }
+
     public async getEdge(limit: number, cursor?: string): Promise<EdgeUtilData<TattooEntity>> {
         const entities = await this.tattooStore.findList(limit + 1, EdgeUtil.parse(cursor));
 

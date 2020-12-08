@@ -1,11 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GraphQL API tatuaje Consultas de tatuaje Obtiene un tatuaje por id 1`] = `
+Object {
+  "data": Object {
+    "tattoo": Object {
+      "artist": Object {
+        "id": "1",
+      },
+      "created": "2020-06-01T12:30:30.000Z",
+      "height": 5200,
+      "id": "1",
+      "image": "photo-1526893299283-37e82b1e4da5",
+      "updated": "2020-07-01T12:30:30.000Z",
+      "width": 3470,
+    },
+  },
+}
+`;
+
 exports[`GraphQL API tatuaje Consultas de tatuaje Obtiene los primeros 5 tatuajes 1`] = `
 Object {
   "data": Object {
     "tattoos": Object {
       "nodes": Array [
         Object {
+          "artist": Object {
+            "id": "29",
+          },
           "created": "2020-06-23T12:30:30.000Z",
           "height": 1536,
           "id": "45",
@@ -14,6 +35,9 @@ Object {
           "width": 2048,
         },
         Object {
+          "artist": Object {
+            "id": "29",
+          },
           "created": "2020-06-22T12:30:30.000Z",
           "height": 3168,
           "id": "44",
@@ -22,6 +46,9 @@ Object {
           "width": 4752,
         },
         Object {
+          "artist": Object {
+            "id": "29",
+          },
           "created": "2020-06-22T12:30:30.000Z",
           "height": 7952,
           "id": "43",
@@ -30,6 +57,9 @@ Object {
           "width": 5304,
         },
         Object {
+          "artist": Object {
+            "id": "29",
+          },
           "created": "2020-06-21T12:30:30.000Z",
           "height": 5616,
           "id": "42",
@@ -38,6 +68,9 @@ Object {
           "width": 3388,
         },
         Object {
+          "artist": Object {
+            "id": "29",
+          },
           "created": "2020-06-21T12:30:30.000Z",
           "height": 4000,
           "id": "41",
@@ -61,6 +94,9 @@ Object {
     "tattoos": Object {
       "nodes": Array [
         Object {
+          "artist": Object {
+            "id": "5",
+          },
           "created": "2020-06-03T12:30:30.000Z",
           "height": 2666,
           "id": "5",
@@ -69,6 +105,9 @@ Object {
           "width": 4000,
         },
         Object {
+          "artist": Object {
+            "id": "5",
+          },
           "created": "2020-06-02T12:30:30.000Z",
           "height": 3072,
           "id": "4",
@@ -77,6 +116,9 @@ Object {
           "width": 4608,
         },
         Object {
+          "artist": Object {
+            "id": "3",
+          },
           "created": "2020-06-02T12:30:30.000Z",
           "height": 6000,
           "id": "3",
@@ -85,6 +127,9 @@ Object {
           "width": 4000,
         },
         Object {
+          "artist": Object {
+            "id": "3",
+          },
           "created": "2020-06-01T12:30:30.000Z",
           "height": 3745,
           "id": "2",
@@ -93,6 +138,9 @@ Object {
           "width": 5400,
         },
         Object {
+          "artist": Object {
+            "id": "1",
+          },
           "created": "2020-06-01T12:30:30.000Z",
           "height": 5200,
           "id": "1",

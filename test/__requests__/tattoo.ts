@@ -1,8 +1,27 @@
+export const TATTOO = `
+    query tattoo($id: ID!) {
+        tattoo(id: $id) {
+            id
+            artist {
+                id
+            }
+            image
+            width
+            height
+            created
+            updated
+        }
+    }
+`;
+
 export const TATTOOS = `
     query tattoos($limit: Int!, $cursor: String) {
         tattoos(limit: $limit, cursor: $cursor) {
             nodes {
                 id
+                artist {
+                    id
+                }
                 image
                 width
                 height

@@ -1,9 +1,11 @@
 extend type Query {
+    tattoo(id: ID!): Tattoo
     tattoos(limit: Int!, cursor: String): TattooEdge!
 }
 
 type Tattoo {
     id: ID!
+    artist: Artist!
     image: String!
     width: Int!
     height: Int!

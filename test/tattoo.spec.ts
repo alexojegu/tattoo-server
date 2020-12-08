@@ -1,4 +1,4 @@
-import { TATTOOS } from "./__requests__/tattoo";
+import { TATTOO, TATTOOS } from "./__requests__/tattoo";
 import { seed, wipe } from "./__utils__/database";
 import { post } from "./__utils__/request";
 
@@ -10,6 +10,13 @@ describe("GraphQL API tatuaje", () => {
 
         afterAll(async () => {
             await wipe();
+        });
+
+        test("Obtiene un tatuaje por id", async () => {
+            const variables = { id: 1 };
+            const response = await post(TATTOO, variables);
+
+            expect(await response.json()).toMatchSnapshot();
         });
 
         test("Obtiene los primeros 5 tatuajes", async () => {
