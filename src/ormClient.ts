@@ -63,7 +63,7 @@ export default class OrmClient {
     }
 
     private async initialize(): Promise<void> {
-        let deferred!: (value?: boolean) => void;
+        let deferred!: (value: boolean) => void;
 
         this.initialized = new Promise((resolve) => (deferred = resolve));
         this.mikroOrm = await MikroORM.init(this.options, false);

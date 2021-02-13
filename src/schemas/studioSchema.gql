@@ -1,0 +1,19 @@
+extend type Query {
+    studio(id: ID!): Studio
+}
+
+type Studio {
+    id: ID!
+    artists: [Artist]!
+    name: String!
+    image: String!
+    website: String
+    instagram: String
+    facebook: String
+    phone: String!
+    address: String!
+    location: [Float]!
+    about: String!
+    created: Date!
+    updated: Date
+}

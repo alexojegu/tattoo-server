@@ -6,6 +6,7 @@ extend type Query {
 type Artist {
     id: ID!
     account: Account!
+    studio: Studio!
     tattoos(limit: Int!, cursor: String): TattooEdge!
     website: String
     instagram: String

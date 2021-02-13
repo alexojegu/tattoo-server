@@ -6,7 +6,7 @@ export default class TattooEntity {
     @PrimaryKey()
     public id!: number;
 
-    @ManyToOne(() => ArtistEntity, { wrappedReference: true })
+    @ManyToOne({ entity: () => ArtistEntity, wrappedReference: true })
     public artist!: Reference<ArtistEntity>;
 
     @Property()
@@ -21,6 +21,6 @@ export default class TattooEntity {
     @Property({ onCreate: () => new Date() })
     public created!: Date;
 
-    @Property({ nullable: true, onUpdate: () => new Date() })
+    @Property({ onUpdate: () => new Date(), nullable: true })
     public updated?: Date;
 }

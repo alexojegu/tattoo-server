@@ -20,6 +20,6 @@ export default class AccountEntity {
     @Property({ onCreate: () => new Date() })
     public created!: Date;
 
-    @Property({ nullable: true, onUpdate: () => new Date() })
+    @Property({ onUpdate: () => new Date(), nullable: true })
     public updated?: Date;
 }

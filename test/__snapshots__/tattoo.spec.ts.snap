@@ -1,23 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GraphQL API tatuaje Consultas de tatuaje Obtiene un tatuaje por id 1`] = `
-Object {
-  "data": Object {
-    "tattoo": Object {
-      "artist": Object {
-        "id": "1",
-      },
-      "created": "2020-06-01T12:30:30.000Z",
-      "height": 5200,
-      "id": "1",
-      "image": "photo-1526893299283-37e82b1e4da5",
-      "updated": "2020-07-01T12:30:30.000Z",
-      "width": 3470,
-    },
-  },
-}
-`;
-
 exports[`GraphQL API tatuaje Consultas de tatuaje Obtiene los primeros 5 tatuajes 1`] = `
 Object {
   "data": Object {
@@ -153,6 +135,24 @@ Object {
         "cursor": "eyJpZCI6MX0=",
         "next": false,
       },
+    },
+  },
+}
+`;
+
+exports[`GraphQL API tatuaje Consultas de tatuaje Obtiene un tatuaje por id 1`] = `
+Object {
+  "data": Object {
+    "tattoo": Object {
+      "artist": Object {
+        "id": "1",
+      },
+      "created": "2020-06-01T12:30:30.000Z",
+      "height": 5200,
+      "id": "1",
+      "image": "photo-1526893299283-37e82b1e4da5",
+      "updated": "2020-07-01T12:30:30.000Z",
+      "width": 3470,
     },
   },
 }

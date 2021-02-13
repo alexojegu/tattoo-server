@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphQL API estudio Consultas de estudio Obtiene un estudio por id 1`] = `
+Object {
+  "data": Object {
+    "studio": Object {
+      "about": "Meis vocent signiferumque pri et. Facilis corpora recusabo ne quo, eum ne eruditi blandit suscipiantur. Mazim sapientem sed id, sea debet commune iracundia in. Eius falli propriae te usu. In usu nonummy volumus expetenda, sint quando facilisis ei per, delectus constituto sea te.
+Senserit mediocrem vis ex, et dicunt deleniti gubergren mei. Mel id clita mollis repudiare. Sed ad nostro delicatissimi, postea pertinax est an. Adhuc sensibus percipitur sed te, eirmod tritani debitis nec ea. Cu vis quis gubergren.",
+      "address": "373 Amoth Alley",
+      "artists": Array [
+        Object {
+          "id": "1",
+        },
+      ],
+      "created": "2020-03-01T12:30:30.000Z",
+      "facebook": "http://networkadvertising.org",
+      "id": "1",
+      "image": "photo-1522139137660-4248e04955b8",
+      "instagram": "https://youku.com",
+      "location": Array [
+        49.0156679,
+        33.6450451,
+      ],
+      "name": "Hansen-Hoppe",
+      "phone": "6879075825",
+      "updated": "2020-04-01T12:30:30.000Z",
+      "website": "http://who.int",
+    },
+  },
+}
+`;

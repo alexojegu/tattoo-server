@@ -5,6 +5,9 @@ export const ARTIST = `
             account {
                 id
             }
+            studio {
+                id
+            }
             tattoos(limit: $tattooLimit) {
                 nodes {
                     id
@@ -25,6 +28,9 @@ export const ARTISTS = `
             nodes {
                 id
                 account {
+                    id
+                }
+                studio {
                     id
                 }
                 tattoos(limit: $tattooLimit) {

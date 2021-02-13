@@ -1,5 +1,6 @@
-import { Collection, Entity, OneToMany, OneToOne, PrimaryKey, Property, Reference } from "@mikro-orm/core";
+import { Collection, Entity, ManyToOne, OneToMany, OneToOne, PrimaryKey, Property, Reference } from "@mikro-orm/core";
 import AccountEntity from "./accountEntity";
+import StudioEntity from "./studioEntity";
 import TattooEntity from "./tattooEntity";
 
 @Entity({ tableName: "artist" })
@@ -7,10 +8,13 @@ export default class ArtistEntity {
     @PrimaryKey()
     public id!: number;
 
-    @OneToOne(() => AccountEntity, undefined, { wrappedReference: true })
+    @OneToOne({ entity: () => AccountEntity, wrappedReference: true })
     public account!: Reference<AccountEntity>;
 
-    @OneToMany(() => TattooEntity, "artist")
+    @ManyToOne({ entity: () => StudioEntity, wrappedReference: true })
+    public studio!: Reference<StudioEntity>;
+
+    @OneToMany({ entity: () => TattooEntity, mappedBy: "artist" })
     public tattoos: Collection<TattooEntity>;
 
     @Property({ nullable: true })
@@ -25,7 +29,7 @@ export default class ArtistEntity {
     @Property({ onCreate: () => new Date() })
     public created!: Date;
 
-    @Property({ nullable: true, onUpdate: () => new Date() })
+    @Property({ onUpdate: () => new Date(), nullable: true })
     public updated?: Date;
 
     public constructor() {

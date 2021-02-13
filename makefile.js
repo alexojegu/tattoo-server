@@ -26,13 +26,13 @@ target.lint = () => {
 
 target.test = () => {
   environment('test');
-  exec('jest -i --colors');
+  exec('jest --runInBand --colors');
 };
 
 target.build = () => {
   environment('production');
   rm('-rf', 'dist/*');
-  exec('tsc -p tsconfig.build.json');
+  exec('tsc --project tsconfig.build.json');
   cp('-r', 'src/schemas', 'dist');
 };
 

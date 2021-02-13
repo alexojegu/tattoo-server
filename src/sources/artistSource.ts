@@ -30,4 +30,8 @@ export default class ArtistSource extends DataSource {
     public async loadById(id: number): Promise<ArtistEntity | undefined> {
         return this.artistLoader.getById(id);
     }
+
+    public async loadByStudio(studio: number): Promise<ArtistEntity[]> {
+        return this.artistLoader.getByStudio(studio);
+    }
 }

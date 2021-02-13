@@ -19,6 +19,10 @@ export default class ArtistStore {
         return this.artistRepository.find({ id: { $in: ids as number[] } });
     }
 
+    public async findStudios(studios: (string | number)[]): Promise<ArtistEntity[]> {
+        return this.artistRepository.find({ studio: { $in: studios as number[] } });
+    }
+
     public async findList(limit: number, cursor?: ArtistStoreCursor): Promise<ArtistEntity[]> {
         const query = this.artistRepository.createQueryBuilder("e0").select(["e0.*"]);
 

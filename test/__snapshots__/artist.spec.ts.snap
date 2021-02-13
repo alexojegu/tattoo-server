@@ -11,6 +11,9 @@ Object {
       "facebook": "https://aol.com",
       "id": "1",
       "instagram": "http://tumblr.com",
+      "studio": Object {
+        "id": "1",
+      },
       "tattoos": Object {
         "nodes": Array [
           Object {
@@ -38,6 +41,9 @@ Object {
           "facebook": "https://moonfruit.com",
           "id": "30",
           "instagram": null,
+          "studio": Object {
+            "id": "30",
+          },
           "tattoos": Object {
             "nodes": Array [],
           },
@@ -52,6 +58,9 @@ Object {
           "facebook": "http://uiuc.edu",
           "id": "29",
           "instagram": "http://nasa.gov",
+          "studio": Object {
+            "id": "29",
+          },
           "tattoos": Object {
             "nodes": Array [
               Object {
@@ -76,6 +85,9 @@ Object {
           "facebook": "https://uol.com.br",
           "id": "28",
           "instagram": null,
+          "studio": Object {
+            "id": "27",
+          },
           "tattoos": Object {
             "nodes": Array [],
           },
@@ -90,6 +102,9 @@ Object {
           "facebook": "https://google.it",
           "id": "27",
           "instagram": "http://yahoo.co.jp",
+          "studio": Object {
+            "id": "27",
+          },
           "tattoos": Object {
             "nodes": Array [
               Object {
@@ -114,6 +129,9 @@ Object {
           "facebook": "http://harvard.edu",
           "id": "26",
           "instagram": null,
+          "studio": Object {
+            "id": "26",
+          },
           "tattoos": Object {
             "nodes": Array [],
           },
@@ -143,6 +161,9 @@ Object {
           "facebook": "http://msu.edu",
           "id": "5",
           "instagram": "http://wufoo.com",
+          "studio": Object {
+            "id": "5",
+          },
           "tattoos": Object {
             "nodes": Array [
               Object {
@@ -167,6 +188,9 @@ Object {
           "facebook": "http://rambler.ru",
           "id": "4",
           "instagram": null,
+          "studio": Object {
+            "id": "3",
+          },
           "tattoos": Object {
             "nodes": Array [],
           },
@@ -181,6 +205,9 @@ Object {
           "facebook": "http://state.tx.us",
           "id": "3",
           "instagram": "https://imgur.com",
+          "studio": Object {
+            "id": "3",
+          },
           "tattoos": Object {
             "nodes": Array [
               Object {
@@ -202,6 +229,9 @@ Object {
           "facebook": "http://friendfeed.com",
           "id": "2",
           "instagram": null,
+          "studio": Object {
+            "id": "2",
+          },
           "tattoos": Object {
             "nodes": Array [],
           },
@@ -216,6 +246,9 @@ Object {
           "facebook": "https://aol.com",
           "id": "1",
           "instagram": "http://tumblr.com",
+          "studio": Object {
+            "id": "1",
+          },
           "tattoos": Object {
             "nodes": Array [
               Object {

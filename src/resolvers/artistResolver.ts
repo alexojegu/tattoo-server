@@ -16,6 +16,9 @@ const artistType: IResolverObject<ArtistEntity, GraphqlMiddlewareContext> = {
     account: async ({ account }, _args, { dataSources }) => {
         return dataSources.accountSource.loadById(account.unwrap().id);
     },
+    studio: async ({ studio }, _args, { dataSources }) => {
+        return dataSources.studioSource.loadById(studio.unwrap().id);
+    },
     tattoos: async ({ id }, { limit, cursor }, { dataSources }) => {
         return dataSources.tattooSource.loadByArtist(id, limit, EdgeUtil.decode(cursor));
     },
