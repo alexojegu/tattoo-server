@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '.env.test' });
+require('dotenv').config();
 
 module.exports = {
   preset: 'ts-jest',

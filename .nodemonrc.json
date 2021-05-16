@@ -1,5 +1,5 @@
 {
   "watch": ["src"],
-  "ext": ".gql,.ts",
-  "exec": "ts-node src/index.ts"
+  "ext": ".ts,.graphql",
+  "exec": "node --inspect --require ts-node/register src/index.ts"
 }

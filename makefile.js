@@ -1,52 +1,34 @@
+require('dotenv').config();
 require('shelljs/make');
 
-const { readFileSync } = require('fs');
-const { parse } = require('dotenv');
-
-function environment(node) {
-  const config = parse(readFileSync(`.env.${node}`));
-
-  env['NODE_ENV'] = node;
-
-  for (const key in config) {
-    env[key] = config[key];
-  }
-}
-
 target.start = () => {
-  environment('production');
+  env['NODE_ENV'] = 'production';
   exec('node dist/index.js');
 };
 
-target.lint = () => {
-  environment('development');
-  exec('eslint . --ext .js,.ts');
-  exec('prettier src/**/*.gql --write');
+target.test = () => {
+  env['NODE_ENV'] = 'test';
+  exec('jest --colors --runInBand');
 };
 
-target.test = () => {
-  environment('test');
-  exec('jest --runInBand --colors');
+target.lint = () => {
+  env['NODE_ENV'] = 'development';
+  exec('eslint --color .');
+};
+
+target.pretty = () => {
+  env['NODE_ENV'] = 'development';
+  exec('prettier --write **/*.{graphql,svg}');
 };
 
 target.build = () => {
-  environment('production');
-  rm('-rf', 'dist/*');
+  env['NODE_ENV'] = 'production';
+  rm('-r', 'dist/*');
   exec('tsc --project tsconfig.build.json');
   cp('-r', 'src/schemas', 'dist');
 };
 
 target.watch = () => {
-  environment('development');
+  env['NODE_ENV'] = 'development';
   exec('nodemon --config .nodemonrc.json');
-};
-
-target.git = ([hook]) => {
-  switch (hook) {
-    case 'pre-commit':
-      target.lint();
-      target.test();
-      target.build();
-      break;
-  }
 };

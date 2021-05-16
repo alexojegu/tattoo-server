@@ -23,8 +23,333 @@ Senserit mediocrem vis ex, et dicunt deleniti gubergren mei. Mel id clita mollis
       ],
       "name": "Hansen-Hoppe",
       "phone": "6879075825",
+      "tattoos": Object {
+        "nodes": Array [],
+      },
       "updated": "2020-04-01T12:30:30.000Z",
       "website": "http://who.int",
+    },
+  },
+}
+`;
+
+exports[`GraphQL API estudio Consultas de estudio Obtiene los primeros 5 estudios 1`] = `
+Object {
+  "data": Object {
+    "studios": Object {
+      "nodes": Array [
+        Object {
+          "about": "No his munere interesset. At soluta accusam gloriatur eos, ferri commodo sed id, ei tollit legere nec. Eum et iudico graecis, cu zzril instructior per, usu at augue epicurei. Saepe scaevola takimata vix id. Errem dictas posidonium id vis, ne modo affert incorrupte eos.",
+          "address": "84773 Ridgeview Lane",
+          "artists": Array [
+            Object {
+              "id": "30",
+            },
+          ],
+          "created": "2020-03-30T12:30:30.000Z",
+          "facebook": "http://goodreads.com",
+          "id": "30",
+          "image": "photo-1585844508832-81ed8bd5ca29",
+          "instagram": null,
+          "location": Array [
+            35.3985584,
+            136.8331549,
+          ],
+          "name": "Jaskolski Group",
+          "phone": "4223934997",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "45",
+              },
+              Object {
+                "id": "44",
+              },
+              Object {
+                "id": "43",
+              },
+            ],
+          },
+          "updated": null,
+          "website": null,
+        },
+        Object {
+          "about": "Cu nam labores lobortis definiebas, ei aliquyam salutatus persequeris quo, cum eu nemore fierent dissentiunt. Per vero dolor id, vide democritum scribentur eu vim, pri erroribus temporibus ex. Euismod molestie offendit has no. Quo te semper invidunt quaestio, per vituperatoribus sadipscing ei, partem aliquyam sensibus in cum.",
+          "address": "443 Valley Edge Court",
+          "artists": Array [
+            Object {
+              "id": "29",
+            },
+          ],
+          "created": "2020-03-29T12:30:30.000Z",
+          "facebook": "http://ehow.com",
+          "id": "29",
+          "image": "photo-1549924231-f129b911e442",
+          "instagram": "https://illinois.edu",
+          "location": Array [
+            52.4867189,
+            13.4343715,
+          ],
+          "name": "Klein & Trantow",
+          "phone": "8661118631",
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": "2020-04-15T12:30:30.000Z",
+          "website": "https://blog.com",
+        },
+        Object {
+          "about": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+In mel saperet expetendis. Vitae urbanitas sadipscing nec ut, at vim quis lorem labitur. Exerci electram has et, vidit solet tincidunt quo ad, moderatius contentiones nec no. Nam et puto abhorreant scripserit, et cum inimicus accusamus.",
+          "address": "8184 Vahlen Center",
+          "artists": Array [],
+          "created": "2020-03-28T12:30:30.000Z",
+          "facebook": "https://oaic.gov.au",
+          "id": "28",
+          "image": "photo-1496200186974-4293800e2c20",
+          "instagram": null,
+          "location": Array [
+            37.9695509,
+            23.2138496,
+          ],
+          "name": "Bechtelar-Nader",
+          "phone": "1912305636",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "40",
+              },
+              Object {
+                "id": "39",
+              },
+              Object {
+                "id": "38",
+              },
+            ],
+          },
+          "updated": null,
+          "website": "https://geocities.com",
+        },
+        Object {
+          "about": "Wisi forensibus mnesarchum in cum. Per id impetus abhorreant, his no magna definiebas, inani rationibus in quo. Ut vidisse dolores est, ut quis nominavi mel. Ad pri quod apeirian concludaturque, id timeam iudicabit rationibus pri. Erant putant luptatum ex sit, error euismod ad qui, meliore voluptatum complectitur an vix. Clita persius sed et, vix vidit consulatu complectitur ex. Per nonummy postulant assentior an, mea audiam fabellas deserunt id.",
+          "address": "5422 Lake View Place",
+          "artists": Array [
+            Object {
+              "id": "27",
+            },
+            Object {
+              "id": "28",
+            },
+          ],
+          "created": "2020-03-27T12:30:30.000Z",
+          "facebook": "https://blogger.com",
+          "id": "27",
+          "image": "photo-1569077770428-b5937c3c9295",
+          "instagram": "https://opera.com",
+          "location": Array [
+            33.021266,
+            35.447949,
+          ],
+          "name": "Schimmel Inc",
+          "phone": "6231085239",
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": "2020-04-14T12:30:30.000Z",
+          "website": null,
+        },
+        Object {
+          "about": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
+          "address": "34386 Declaration Drive",
+          "artists": Array [
+            Object {
+              "id": "26",
+            },
+          ],
+          "created": "2020-03-26T12:30:30.000Z",
+          "facebook": "http://illinois.edu",
+          "id": "26",
+          "image": "photo-1584441405886-bc91be61e56a",
+          "instagram": null,
+          "location": Array [
+            43.6297603,
+            0.5815411,
+          ],
+          "name": "Auer & Medhurst",
+          "phone": "2265123364",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "36",
+              },
+              Object {
+                "id": "35",
+              },
+              Object {
+                "id": "34",
+              },
+            ],
+          },
+          "updated": null,
+          "website": "http://ucla.edu",
+        },
+      ],
+      "page": Object {
+        "cursor": "eyJpZCI6MjZ9",
+        "next": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`GraphQL API estudio Consultas de estudio Obtiene los ultimos 5 estudios 1`] = `
+Object {
+  "data": Object {
+    "studios": Object {
+      "nodes": Array [
+        Object {
+          "about": "His audiam deserunt in, eum ubique voluptatibus te. In reque dicta usu. Ne rebum dissentiet eam, vim omnis deseruisse id. Ullum deleniti vituperata at quo, insolens complectitur te eos, ea pri dico munere propriae. Vel ferri facilis ut, qui paulo ridens praesent ad. Possim alterum qui cu. Accusamus consulatu ius te, cu decore soleat appareat usu.",
+          "address": "5 Texas Circle",
+          "artists": Array [
+            Object {
+              "id": "5",
+            },
+          ],
+          "created": "2020-03-05T12:30:30.000Z",
+          "facebook": "https://domainmarket.com",
+          "id": "5",
+          "image": "photo-1516876437184-593fda40c7ce",
+          "instagram": "https://deviantart.com",
+          "location": Array [
+            -8.5808412,
+            115.1563072,
+          ],
+          "name": "King and Sons",
+          "phone": "6541462350",
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": "2020-04-03T12:30:30.000Z",
+          "website": "http://com.com",
+        },
+        Object {
+          "about": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+An vim commodo dolorem volutpat, cu expetendis voluptatum usu, et mutat consul adversarium his. His natum numquam legimus an, diam fabulas mei ut. Melius fabellas sadipscing vel id. Partem diceret mandamus mea ne, has te tempor nostrud. Aeque nostro eum no.",
+          "address": "49138 Meadow Vale Place",
+          "artists": Array [],
+          "created": "2020-03-04T12:30:30.000Z",
+          "facebook": "https://rambler.ru",
+          "id": "4",
+          "image": "photo-1545231027-637d2f6210f8",
+          "instagram": null,
+          "location": Array [
+            -7.4869186,
+            108.4691492,
+          ],
+          "name": "Wolff LLC",
+          "phone": "5821984678",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "3",
+              },
+              Object {
+                "id": "2",
+              },
+            ],
+          },
+          "updated": null,
+          "website": "https://nature.com",
+        },
+        Object {
+          "about": "Dicunt percipit deserunt ut usu. Aliquip delenit an eam, vocent vituperata vim ea. Ei mollis audire interpretaris cum, ei impedit fierent sea. Ius at homero noster prompta, ea sit dignissim vituperata efficiendi. Natum placerat ad mei.",
+          "address": "837 Dapin Pass",
+          "artists": Array [
+            Object {
+              "id": "3",
+            },
+            Object {
+              "id": "4",
+            },
+          ],
+          "created": "2020-03-03T12:30:30.000Z",
+          "facebook": "https://bloglovin.com",
+          "id": "3",
+          "image": "photo-1554463529-e27854014799",
+          "instagram": "http://technorati.com",
+          "location": Array [
+            47.1426,
+            28.6295416,
+          ],
+          "name": "Stark-Walker",
+          "phone": "6131337797",
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": "2020-04-02T12:30:30.000Z",
+          "website": null,
+        },
+        Object {
+          "about": "At cum soleat disputationi, quo veri admodum vituperata ad. Ea vix ceteros complectitur, vel cu nihil nullam. Nam placerat oporteat molestiae ei, an putant albucius qui. Oblique menandri ei his, mei te mazim oportere comprehensam.",
+          "address": "6 Morrow Trail",
+          "artists": Array [
+            Object {
+              "id": "2",
+            },
+          ],
+          "created": "2020-03-02T12:30:30.000Z",
+          "facebook": "https://icio.us",
+          "id": "2",
+          "image": "photo-1533319417894-6fbb331e5513",
+          "instagram": null,
+          "location": Array [
+            22.270978,
+            113.576677,
+          ],
+          "name": "Emmerich Inc",
+          "phone": "1224801982",
+          "tattoos": Object {
+            "nodes": Array [
+              Object {
+                "id": "1",
+              },
+            ],
+          },
+          "updated": null,
+          "website": "https://amazon.de",
+        },
+        Object {
+          "about": "Meis vocent signiferumque pri et. Facilis corpora recusabo ne quo, eum ne eruditi blandit suscipiantur. Mazim sapientem sed id, sea debet commune iracundia in. Eius falli propriae te usu. In usu nonummy volumus expetenda, sint quando facilisis ei per, delectus constituto sea te.
+Senserit mediocrem vis ex, et dicunt deleniti gubergren mei. Mel id clita mollis repudiare. Sed ad nostro delicatissimi, postea pertinax est an. Adhuc sensibus percipitur sed te, eirmod tritani debitis nec ea. Cu vis quis gubergren.",
+          "address": "373 Amoth Alley",
+          "artists": Array [
+            Object {
+              "id": "1",
+            },
+          ],
+          "created": "2020-03-01T12:30:30.000Z",
+          "facebook": "http://networkadvertising.org",
+          "id": "1",
+          "image": "photo-1522139137660-4248e04955b8",
+          "instagram": "https://youku.com",
+          "location": Array [
+            49.0156679,
+            33.6450451,
+          ],
+          "name": "Hansen-Hoppe",
+          "phone": "6879075825",
+          "tattoos": Object {
+            "nodes": Array [],
+          },
+          "updated": "2020-04-01T12:30:30.000Z",
+          "website": "http://who.int",
+        },
+      ],
+      "page": Object {
+        "cursor": "eyJpZCI6MX0=",
+        "next": false,
+      },
     },
   },
 }

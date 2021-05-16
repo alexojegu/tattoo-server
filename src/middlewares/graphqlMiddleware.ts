@@ -14,7 +14,7 @@ export default class GraphqlMiddleware implements WebServerMiddleware {
 
     public constructor() {
         this.apolloServer = new ApolloServer({
-            typeDefs: loadFilesSync<string>("../schemas/**/*.gql", { globOptions: { cwd: __dirname } }),
+            typeDefs: loadFilesSync<string>("../schemas/*.graphql", { globOptions: { cwd: __dirname } }),
             resolvers: loadFilesSync<IResolvers>("../resolvers/*.{js,ts}", { globOptions: { cwd: __dirname } }),
             dataSources: (): GraphqlMiddlewareContext["dataSources"] => {
                 const child = container.createChildContainer();

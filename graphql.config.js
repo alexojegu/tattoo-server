@@ -1,5 +1,6 @@
-require('dotenv').config({ path: '.env.development' });
+require('dotenv').config();
 
 module.exports = {
-  schema: './src/schemas/*.gql',
+  schema: './src/schemas/*.graphql',
+  documents: './test/__requests__/*.ts',
 };

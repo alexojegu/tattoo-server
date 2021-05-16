@@ -1,5 +1,6 @@
 import { Collection, Entity, OneToMany, PrimaryKey, Property } from "@mikro-orm/core";
 import ArtistEntity from "./artistEntity";
+import TattooEntity from "./tattooEntity";
 import PointType from "./types/pointType";
 
 @Entity({ tableName: "studio" })
@@ -9,6 +10,9 @@ export default class StudioEntity {
 
     @OneToMany({ entity: () => ArtistEntity, mappedBy: "studio" })
     public artists: Collection<ArtistEntity>;
+
+    @OneToMany({ entity: () => TattooEntity, mappedBy: "studio" })
+    public tattoos: Collection<TattooEntity>;
 
     @Property()
     public name!: string;
@@ -45,5 +49,6 @@ export default class StudioEntity {
 
     public constructor() {
         this.artists = new Collection<ArtistEntity>(this);
+        this.tattoos = new Collection<TattooEntity>(this);
     }
 }

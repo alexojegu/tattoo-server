@@ -14,3 +14,7 @@ Base de datos:
   - DATABASE_USER: Usuario de la base de datos.
   - DATABASE_PASSWORD: Contraseña de la base de datos.
   - DATABASE_NAME: Nombre de la base de datos.
+
+## Base de datos
+
+![entidades](doc/assets/database.svg)

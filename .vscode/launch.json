@@ -2,14 +2,9 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Attach Nodemon",
+      "request": "attach",
       "type": "pwa-node",
-      "request": "launch",
-      "name": "Launch Server",
-      "program": "${workspaceFolder}/src/index.ts",
-      "envFile": "${workspaceFolder}/.env.development",
-      "outFiles": [
-        "${workspaceFolder}/dist/**/*.js"
-      ],
       "skipFiles": [
         "<node_internals>/**",
         "${workspaceFolder}/node_modules/**"

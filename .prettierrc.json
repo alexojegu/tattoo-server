@@ -3,9 +3,15 @@
   "trailingComma": "all",
   "overrides": [
     {
-      "files": "*.js",
+      "files": ["*.js"],
       "options": {
         "singleQuote": true
+      }
+    },
+    {
+      "files": ["*.svg"],
+      "options": {
+        "parser": "html"
       }
     }
   ]

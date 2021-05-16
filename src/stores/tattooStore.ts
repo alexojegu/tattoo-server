@@ -6,15 +6,15 @@ import OrmClient from "../ormClient";
 @singleton()
 export default class TattooStore {
     private connection: AbstractSqlConnection;
-    private tattooRepository: EntityRepository<TattooEntity>;
+    private entityRepository: EntityRepository<TattooEntity>;
 
     public constructor(ormClient: OrmClient) {
         this.connection = ormClient.em.getConnection("read");
-        this.tattooRepository = ormClient.em.getRepository(TattooEntity);
+        this.entityRepository = ormClient.em.getRepository(TattooEntity);
     }
 
     public async findId(id: string | number): Promise<TattooEntity | null> {
-        return this.tattooRepository.findOne({ id: { $eq: id as number } });
+        return this.entityRepository.findOne({ id: { $eq: id as number } });
     }
 
     // eslint-disable-next-line prettier/prettier
@@ -37,11 +37,34 @@ export default class TattooStore {
             );
         }
 
-        return results.map((result) => this.tattooRepository.map(result));
+        return results.map((result) => this.entityRepository.map(result));
+    }
+
+    // eslint-disable-next-line prettier/prettier
+    public async findStudios(studios: (string | number)[], limit: number, cursor?: TattooStoreCursor): Promise<TattooEntity[]> {
+        let results;
+
+        if (cursor) {
+            results = await this.connection.execute(
+                `select e0.id, e1.* from studio as e0 left join lateral (
+                    select e2.* from tattoo as e2 where e2.studio_id = e0.id and e2.id < ? order by e2.id desc limit ?
+                ) as e1 on e0.id = e1.studio_id where e1.studio_id in (?)`,
+                [cursor.id, limit, studios],
+            );
+        } else {
+            results = await this.connection.execute(
+                `select e0.id, e1.* from studio as e0 left join lateral (
+                    select e2.* from tattoo as e2 where e2.studio_id = e0.id order by e2.id desc limit ?
+                ) as e1 on e0.id = e1.studio_id where e1.studio_id in (?)`,
+                [limit, studios],
+            );
+        }
+
+        return results.map((result) => this.entityRepository.map(result));
     }
 
     public async findList(limit: number, cursor?: TattooStoreCursor): Promise<TattooEntity[]> {
-        const query = this.tattooRepository.createQueryBuilder("e0").select(["e0.*"]);
+        const query = this.entityRepository.createQueryBuilder("e0").select(["e0.*"]);
 
         if (cursor) {
             query.where({ id: { $lt: cursor.id } });

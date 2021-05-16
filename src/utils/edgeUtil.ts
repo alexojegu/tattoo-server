@@ -1,10 +1,18 @@
 export default class EdgeUtil {
-    public static create<T, K extends keyof T>(list: T[], limit: number, props: K[]): EdgeUtilData<T> {
+    public static create<T>(list: T[], limit: number, keys: (keyof T & string)[]): EdgeUtilData<T> {
         const next = list.length > limit;
         const nodes = next ? list.slice(0, -1) : list;
-        const cursor = JSON.stringify(nodes[nodes.length - 1], props as string[]);
+        const cursor = JSON.stringify(nodes[nodes.length - 1], keys);
 
         return { nodes, page: { next, cursor } };
+    }
+
+    public static parse<T>(cursor?: string): T | undefined {
+        if (!cursor) {
+            return;
+        }
+
+        return JSON.parse(cursor);
     }
 
     public static encode(cursor?: string): string | undefined {
@@ -21,14 +29,6 @@ export default class EdgeUtil {
         }
 
         return Buffer.from(cursor, "base64").toString("utf8");
-    }
-
-    public static parse<T>(cursor?: string): T | undefined {
-        if (!cursor) {
-            return;
-        }
-
-        return JSON.parse(cursor);
     }
 }
 

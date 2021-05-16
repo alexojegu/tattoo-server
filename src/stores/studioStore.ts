@@ -5,17 +5,29 @@ import OrmClient from "../ormClient";
 
 @singleton()
 export default class StudioStore {
-    private studioRepository: EntityRepository<StudioEntity>;
+    private entityRepository: EntityRepository<StudioEntity>;
 
     public constructor(ormClient: OrmClient) {
-        this.studioRepository = ormClient.em.getRepository(StudioEntity);
+        this.entityRepository = ormClient.em.getRepository(StudioEntity);
     }
 
     public async findId(id: string | number): Promise<StudioEntity | null> {
-        return this.studioRepository.findOne({ id: { $eq: id as number } });
+        return this.entityRepository.findOne({ id: { $eq: id as number } });
     }
 
     public async findIds(ids: (string | number)[]): Promise<StudioEntity[]> {
-        return this.studioRepository.find({ id: { $in: ids as number[] } });
+        return this.entityRepository.find({ id: { $in: ids as number[] } });
     }
+
+    public async findList(limit: number, cursor?: StudioStoreCursor): Promise<StudioEntity[]> {
+        if (!cursor) {
+            return this.entityRepository.findAll({ orderBy: { id: "desc" }, limit });
+        }
+
+        return this.entityRepository.find({ id: { $lt: cursor.id as number } }, { orderBy: { id: "desc" }, limit });
+    }
+}
+
+export interface StudioStoreCursor {
+    id: string | number;
 }

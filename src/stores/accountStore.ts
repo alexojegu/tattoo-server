@@ -5,17 +5,17 @@ import OrmClient from "../ormClient";
 
 @singleton()
 export default class AccountStore {
-    private accountRepository: EntityRepository<AccountEntity>;
+    private entityRepository: EntityRepository<AccountEntity>;
 
     public constructor(ormClient: OrmClient) {
-        this.accountRepository = ormClient.em.getRepository(AccountEntity);
+        this.entityRepository = ormClient.em.getRepository(AccountEntity);
     }
 
     public async findId(id: string | number): Promise<AccountEntity | null> {
-        return this.accountRepository.findOne({ id: { $eq: id as number } });
+        return this.entityRepository.findOne({ id: { $eq: id as number } });
     }
 
     public async findIds(ids: (string | number)[]): Promise<AccountEntity[]> {
-        return this.accountRepository.find({ id: { $in: ids as number[] } });
+        return this.entityRepository.find({ id: { $in: ids as number[] } });
     }
 }

@@ -1,4 +1,6 @@
-export const ARTIST = `
+import { gql } from "apollo-server-express";
+
+export const ARTIST = gql`
     query artist($id: ID!, $tattooLimit: Int!) {
         artist(id: $id) {
             id
@@ -22,7 +24,7 @@ export const ARTIST = `
     }
 `;
 
-export const ARTISTS = `
+export const ARTISTS = gql`
     query artists($limit: Int!, $cursor: String, $tattooLimit: Int!) {
         artists(limit: $limit, cursor: $cursor) {
             nodes {

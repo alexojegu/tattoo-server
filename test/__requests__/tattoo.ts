@@ -1,4 +1,6 @@
-export const TATTOO = `
+import { gql } from "apollo-server-express";
+
+export const TATTOO = gql`
     query tattoo($id: ID!) {
         tattoo(id: $id) {
             id
@@ -14,7 +16,7 @@ export const TATTOO = `
     }
 `;
 
-export const TATTOOS = `
+export const TATTOOS = gql`
     query tattoos($limit: Int!, $cursor: String) {
         tattoos(limit: $limit, cursor: $cursor) {
             nodes {

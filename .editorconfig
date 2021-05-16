@@ -2,14 +2,11 @@ root = true
 
 [*]
 charset = utf-8
-end_of_line = lf
+indent_size = 2
+indent_style = space
 trim_trailing_whitespace = true
+end_of_line = lf
 insert_final_newline = true
 
-[*.{js,json,md}]
-indent_style = space
-indent_size = 2
-
-[*.{gql,sql,ts}]
-indent_style = space
+[*.{ts,graphql,sql}]
 indent_size = 4

@@ -1,10 +1,12 @@
 extend type Query {
     studio(id: ID!): Studio
+    studios(limit: Int!, cursor: String): StudioEdge!
 }
 
 type Studio {
     id: ID!
     artists: [Artist]!
+    tattoos(limit: Int!, cursor: String): TattooEdge!
     name: String!
     image: String!
     website: String
@@ -16,4 +18,9 @@ type Studio {
     about: String!
     created: Date!
     updated: Date
+}
+
+type StudioEdge {
+    nodes: [Studio]!
+    page: Page!
 }

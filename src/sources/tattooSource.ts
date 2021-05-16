@@ -32,4 +32,10 @@ export default class TattooSource extends DataSource {
 
         return EdgeUtil.create(entities, limit, ["id"]);
     }
+
+    public async loadByStudio(studio: number, limit: number, cursor?: string): Promise<EdgeUtilData<TattooEntity>> {
+        const entities = await this.tattooLoader.getByStudio(studio, limit + 1, EdgeUtil.parse(cursor));
+
+        return EdgeUtil.create(entities, limit, ["id"]);
+    }
 }

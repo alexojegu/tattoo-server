@@ -5,32 +5,30 @@ import OrmClient from "../ormClient";
 
 @singleton()
 export default class ArtistStore {
-    private artistRepository: EntityRepository<ArtistEntity>;
+    private entityRepository: EntityRepository<ArtistEntity>;
 
     public constructor(ormClient: OrmClient) {
-        this.artistRepository = ormClient.em.getRepository(ArtistEntity);
+        this.entityRepository = ormClient.em.getRepository(ArtistEntity);
     }
 
     public async findId(id: string | number): Promise<ArtistEntity | null> {
-        return this.artistRepository.findOne({ id: { $eq: id as number } });
+        return this.entityRepository.findOne({ id: { $eq: id as number } });
     }
 
     public async findIds(ids: (string | number)[]): Promise<ArtistEntity[]> {
-        return this.artistRepository.find({ id: { $in: ids as number[] } });
+        return this.entityRepository.find({ id: { $in: ids as number[] } });
     }
 
     public async findStudios(studios: (string | number)[]): Promise<ArtistEntity[]> {
-        return this.artistRepository.find({ studio: { $in: studios as number[] } });
+        return this.entityRepository.find({ studio: { $in: studios as number[] } });
     }
 
     public async findList(limit: number, cursor?: ArtistStoreCursor): Promise<ArtistEntity[]> {
-        const query = this.artistRepository.createQueryBuilder("e0").select(["e0.*"]);
-
-        if (cursor) {
-            query.where({ id: { $lt: cursor.id } });
+        if (!cursor) {
+            return this.entityRepository.findAll({ orderBy: { id: "desc" }, limit });
         }
 
-        return query.orderBy({ id: "desc" }).limit(limit).getResult();
+        return this.entityRepository.find({ id: { $lt: cursor.id as number } }, { orderBy: { id: "desc" }, limit });
     }
 }
 
